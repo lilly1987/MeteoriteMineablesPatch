@@ -7,8 +7,8 @@
     <ProjectGuid>{36F281EC-6FDC-4480-AD1E-37C49BD8FFC9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MeteoriteMineablesPatch</RootNamespace>
-    <AssemblyName>MeteoriteMineablesPatch</AssemblyName>
+    <RootNamespace>Lilly.MeteoriteMineablesPatch</RootNamespace>
+    <AssemblyName>MeteoriteMineablesLillyPatch</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
