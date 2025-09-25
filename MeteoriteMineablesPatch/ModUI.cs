@@ -1,10 +1,8 @@
 ﻿using HarmonyLib;
 using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
 using System.Runtime;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +10,7 @@ using UnityEngine;
 using Verse;
 
 
-namespace Lilly
+namespace Lilly.MeteoriteMineablesPatch
 {
     
     public class ModUI : Mod
@@ -72,52 +70,5 @@ namespace Lilly
             return "자원 운석 모드".Translate();
         }
 
-    }
-
-    public class Settings : ModSettings
-    {
-        public static bool onDebug = true;
-
-        public static int min = 25;
-        public static int max = 100;
-
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref onDebug, "onDebug", false);
-            Scribe_Values.Look(ref min, "RangeMin",25);
-            Scribe_Values.Look(ref max, "RangeMax",100);
-            SetValue(min, max);
-        }
-
-        public static void SetValue(int min = 25, int max = 100)
-        {
-
-            try
-            {
-                // 대상 필드 찾기
-                FieldInfo field = typeof(ThingSetMaker_Meteorite).GetField("MineablesCountRange", BindingFlags.Public | BindingFlags.Static);
-
-                if (field != null)
-                {
-                    var range = new IntRange(min, max); // 원하는 범위로 설정
-                    // readonly 필드 강제 수정
-                    field.SetValue(null, range); // 원하는 범위로 변경
-                    MyLog.Message($"MineablesCountRange has been overridden to {range.min}~{range.max}");
-                }
-                else
-                {
-                    MyLog.Warning($"Failed to find MineablesCountRange field");
-                }
-
-            }
-            catch (Exception e)
-            {
-                MyLog.Error($" Fail");
-                MyLog.Error(e.ToString());
-                MyLog.Error($" Fail");
-                //throw;
-            }
-        }
     }
 }

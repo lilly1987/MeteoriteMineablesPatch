@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModUI.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="MyLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
