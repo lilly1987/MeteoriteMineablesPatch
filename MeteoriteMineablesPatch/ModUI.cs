@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
+using System.Runtime;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -22,7 +23,10 @@ namespace Lilly
         public ModUI(ModContentPack content) : base(content)
         {
             self = this;
+            MyLog.Message($"ST");
             settings = GetSettings<Settings>();// 주의. MainSettings의 patch가 먼저 실행됨      
+            Settings.SetValue(Settings.min, Settings.max);
+            MyLog.Message($"ED");            
         }
 
         Vector2 scrollPosition;
