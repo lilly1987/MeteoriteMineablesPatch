@@ -6,6 +6,7 @@
   <url>https://github.com/lilly1987/MeteoriteMineablesPatch</url>
   <supportedVersions>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <!-- <modDependencies> -->
     <!-- <li> -->
@@ -22,7 +23,11 @@
     <!-- <li>Mlie.CaptureThem</li> -->
     <!-- <li>brrainz.harmony</li> -->
   <!-- </loadAfter> -->
-  <description></description>
+  <description>자원 운석에 포함되는 광물 덩어리의 개수를 조절하는 모드입니다.
+
+모드 설정에서 자원 운석의 최소·최대 광물 개수를 지정할 수 있습니다. 기본값은 최소 25개, 최대 100개이며, 운석의 외형 크기가 아니라 운석에 생성되는 광물 덩어리 수량에 적용됩니다.
+
+설정한 값은 자원 운석 생성에 적용됩니다. 값을 크게 설정하면 운석에서 더 많은 자원을 얻을 수 있습니다.</description>
   <modVersion >1.0.0</modVersion>
 	<!-- IgnoreIfNoMatchingField="True" -->
 </ModMetaData>
